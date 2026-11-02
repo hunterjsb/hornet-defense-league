@@ -25,33 +25,39 @@ To swap a photo, upload a new image into `images/` and change the matching `src=
 
 ## Adding online donations later (no backend needed)
 
-The Donate button currently opens an email to Hornetdefenseleague@gmail.com. Any of these free nonprofit options gives you a link you can paste in instead:
+The Donate button currently opens an email to Hornetdefenseleague@gmail.com. The organization has a checking account but no payment processor yet. Any of these free nonprofit options connects to the checking account and gives you a link to paste in:
 
-- **Zeffy** (https://www.zeffy.com): 100% free for nonprofits, no platform fees. Create a donation form and copy its link.
-- **PayPal Giving Fund** (https://www.paypal.com/us/webapps/mpp/givingfund): free enrollment for 501(c)(3)s.
-- **Stripe Payment Link** (https://stripe.com/payments/payment-links): standard card fees, nonprofit discount available on request.
+- **Zeffy** (https://www.zeffy.com): 100% free for nonprofits, no platform fees.
+- **Givebutter** (https://givebutter.com): free, donors can leave an optional tip.
+- **PayPal** (https://www.paypal.com/us/non-profit): discounted nonprofit rates, or free enrollment through PayPal Giving Fund.
 
-Then in `index.html`, find the `<!-- DONATE -->` section and replace the `href="mailto:..."` on the button with the new link, and update the button text (for example "Donate online").
+Then in `index.html`, find the `<!-- DONATE -->` section. The comment there lists the three edits: put the link in the button's `href`, change the button text to "Donate online", and change the note under it.
 
 ## Adding a contact form later
 
 The Contact section uses a plain email link. For a real form without a server, sign up at **Formspree** (https://formspree.io, free tier) and paste their form snippet into the `<!-- CONTACT -->` section.
 
-## Pointing a custom domain (Cloudflare) at GitHub Pages
+## Custom domain: hornetdefenseleague.org (not connected yet)
 
-Once you buy a domain (Cloudflare Registrar sells them at cost):
+The domain **hornetdefenseleague.org** is registered at GoDaddy (registered 2026-10-19, using GoDaddy's default nameservers). It is **not** connected to this site yet. There is intentionally no `CNAME` file in this repo; adding one is step 1 below.
 
-1. **GitHub:** repo **Settings > Pages > Custom domain**, enter the domain (for example `hornetdefenseleague.org`) and Save. This adds a `CNAME` file to the repo.
-2. **Cloudflare:** in the domain's **DNS** tab add:
-   - Four `A` records for the root (`@`): `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
-   - A `CNAME` record: name `www`, target `hunterjsb.github.io`
-   - Set these records to **DNS only** (grey cloud) at first so GitHub can issue the HTTPS certificate.
+When ready:
+
+1. **GitHub:** repo **Settings > Pages > Custom domain**, enter `hornetdefenseleague.org` and Save. This creates a `CNAME` file in the repo containing just `hornetdefenseleague.org`.
+2. **DNS** (at GoDaddy, or at Cloudflare if the nameservers are moved there first):
+   - Remove GoDaddy's default parking `A` records on `@`.
+   - Add four `A` records for `@`: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
+   - Add a `CNAME` record: name `www`, value `hunterjsb.github.io`
+   - If using Cloudflare, set these to **DNS only** (grey cloud) at first so GitHub can issue the HTTPS certificate.
 3. Wait for GitHub to show the domain as verified, then tick **Enforce HTTPS** in Settings > Pages.
-4. Optional: you can switch the records back to Proxied (orange cloud) afterwards. If you do, set Cloudflare **SSL/TLS** mode to **Full**.
+4. Optional (Cloudflare only): switch records to Proxied afterwards and set **SSL/TLS** mode to **Full**.
 
 GitHub's guide: https://docs.github.com/pages/configuring-a-custom-domain-for-your-github-pages-site
 
 ## Content notes
 
-- The mission statement is transcribed from the board-review draft. Update it in `index.html` if the board revises it.
+- The mission statement is the text the Hornet Defense League provided in November 2026 (only typos fixed). Update it in `index.html` if the board revises it.
+- The Hornet Defense League is not officially working with the SC Department of Agriculture or any agency. Agency pages are linked only as public resources; do not add wording that implies a partnership.
+- EIN 42-5169018 is approved for display and appears in the footer and Donate section.
+- The honeybee photo (`images/honeybee-flower.webp`) was provided by the Hornet Defense League.
 - Hornet facts are paraphrased from official sources (Georgia Department of Agriculture, Clemson Department of Plant Industry, USDA APHIS, UGA, Penn State Extension, Washington State Department of Agriculture), all linked in the Resources section. The approach was inspired by Asian Hornet Alert (UK). Detection numbers change quickly, so check the sources each season.

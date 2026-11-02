@@ -55,12 +55,16 @@
     <section id="mission" class="section">
       <div class="wrap narrow">
         <h2>Our Mission</h2>
-        <!-- EDIT: Mission statement text. Transcribed exactly from the board-review draft. -->
+        <!-- EDIT: Mission statement text, as provided by the Hornet Defense League (November 2026). -->
         <div class="mission">
           <p>The mission of the Hornet Defense League is to protect honeybees and native pollinators from the invasive Yellow-Legged Hornet (<i>Vespa velutina</i>) through public education, increased awareness, community engagement in citizen science, and collaborative, open-source field research.</p>
           <p>Our efforts focus on implementing and evaluating existing hornet trapping, tracking, and mitigation techniques while developing innovative approaches informed by hands-on field research and behavioral observations. Our goal is to advance practical, cost-effective, and time-efficient strategies that protect honeybee colonies, reduce predation on honeybees and native pollinators, and limit the population growth and spread of this invasive species.</p>
           <p>By bringing together individuals, community groups, beekeepers, researchers, and volunteers, we strive to create a coordinated, science-based approach to protecting pollinators and preserving our ecosystems.</p>
         </div>
+        <figure class="photo photo-mission">
+          <img src="images/honeybee-flower.webp" alt="A honeybee gathering pollen on a bright yellow black-eyed Susan" width="1200" height="900" loading="lazy">
+          <figcaption>A honeybee foraging on a black-eyed Susan. This is what we are protecting.</figcaption>
+        </figure>
       </div>
     </section>
 
@@ -157,6 +161,7 @@
       <div class="wrap narrow">
         <h2>Resources and sources</h2>
         <p>Everything on this page comes from these official and expert sources. Visit them for the latest numbers and guidance.</p>
+        <p class="small">The Hornet Defense League is an independent nonprofit. We link to these agencies and universities as public resources and are not affiliated with or endorsed by them.</p>
         <ol class="sources">
           <li id="src-gda"><a href="https://agr.georgia.gov/yellow-legged-hornet" rel="noopener">Georgia Department of Agriculture: Yellow-Legged Hornet</a> (includes the <a href="https://agr.georgia.gov/yellow-legged-hornet-eradication-map" rel="noopener">eradication map</a>)</li>
           <li id="src-uga"><a href="https://bees.caes.uga.edu/bees-beekeeping-pollination/yellow-legged-hornet.html" rel="noopener">University of Georgia Bee Program: Yellow-Legged Hornet</a></li>
@@ -178,9 +183,13 @@
       <div class="wrap narrow center">
         <h2>Donate</h2>
         <p>Your gift funds traps, field research, and community education to keep this hornet from spreading. The Hornet Defense League is a 501(c)(3) nonprofit, so donations are tax-deductible to the extent allowed by law.</p>
-        <!-- EDIT: When an online donation page exists (Zeffy, PayPal Giving Fund, Stripe), replace the href below with its link. -->
-        <a class="btn btn-dark btn-lg" href="mailto:Hornetdefenseleague@gmail.com?subject=I%20would%20like%20to%20donate">Email us to donate</a>
-        <p class="small">Online giving is coming soon. For now, email us and we will reply with how to give.</p>
+        <!-- EDIT (online giving): When a Zeffy, Givebutter, or PayPal donation page exists,
+             1. paste its link into href="..." on the button below (replacing the whole mailto: link),
+             2. change the button text to "Donate online",
+             3. change the note under it to "Prefer to give by check? Email Hornetdefenseleague@gmail.com." -->
+        <a class="btn btn-dark btn-lg" id="donate-button" href="mailto:Hornetdefenseleague@gmail.com?subject=I%20would%20like%20to%20donate">Email us to donate</a>
+        <p class="small donate-note">Online giving is coming soon. For now, email us and we will reply with how to give.</p>
+        <p class="small donate-ein">Hornet Defense League is a 501(c)(3) nonprofit. EIN 42-5169018.</p>
       </div>
     </section>
 
