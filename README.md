@@ -60,4 +60,10 @@ GitHub's guide: https://docs.github.com/pages/configuring-a-custom-domain-for-yo
 - The Hornet Defense League is not officially working with the SC Department of Agriculture or any agency. Agency pages are linked only as public resources; do not add wording that implies a partnership.
 - EIN 42-5169018 is approved for display and appears in the footer and Donate section.
 - The honeybee photo (`images/honeybee-flower.webp`) was provided by the Hornet Defense League.
+- The look is light and bee-inspired (honey, amber, warm cream, black accents), as the Hornet Defense League asked in November 2026. All colors are at the top of `styles.css`.
+- Wording rules from the Hornet Defense League: say "hawking" (never "hovering") for hornets hunting at a hive, write the species as yellow-legged hornet (*Vespa velutina*) and do not add "also known as Asian hornet", and never call the nest a "paper nest" (people confuse it with paper wasp nests).
+- Lead with South Carolina (the Lowcountry is the epicenter), then Georgia, then North Carolina.
+- The South Carolina numbers (643 nests statewide, 569 in Beaufort County, as of October 27, 2026, source Hornet Herald) and the "over 80% of nests reported by citizens" point were provided by the Hornet Defense League. Update them in the `<!-- SC NUMBERS -->` block of `index.html` when a new Hornet Herald comes out.
+- The four hawking photos (`images/hawking-1.webp` to `hawking-4.webp`) were provided by the Hornet Defense League.
+- The Get Involved section is waiting on three things, each marked with an `EDIT (still needed)` comment in `index.html`: the trap-building link and bait instructions, photos of the nest stages, and the Early Spring Queen Trapping date and flyer.
 - Hornet facts are paraphrased from official sources (Georgia Department of Agriculture, Clemson Department of Plant Industry, USDA APHIS, UGA, Penn State Extension, Washington State Department of Agriculture), all linked in the Resources section. The approach was inspired by Asian Hornet Alert (UK). Detection numbers change quickly, so check the sources each season.
