@@ -13,6 +13,7 @@ It is plain HTML and CSS. There is no framework, no build step, no backend, and 
 | `index.html` | All the page text and sections |
 | `styles.css` | Colors, fonts, layout (colors are at the top under `:root`) |
 | `images/` | Logo and photos (compressed WebP) |
+| `files/` | Downloads: the queen trapping flyer and the trap instructions PDF |
 
 ## How to edit the text
 
@@ -23,15 +24,12 @@ It is plain HTML and CSS. There is no framework, no build step, no backend, and 
 
 To swap a photo, upload a new image into `images/` and change the matching `src="images/..."` in `index.html`. Keep images under about 300 KB so the page loads fast on phones (https://squoosh.app is a free compressor).
 
-## Adding online donations later (no backend needed)
+## Online donations
 
-The Donate button currently opens an email to Hornetdefenseleague@gmail.com. The organization has a checking account but no payment processor yet. Any of these free nonprofit options connects to the checking account and gives you a link to paste in:
+The Donate button goes to the Zeffy donation form the Hornet Defense League set up in November 2026:
+https://www.zeffy.com/en-US/donation-form/donate-to-help-the-pollinatora
 
-- **Zeffy** (https://www.zeffy.com): 100% free for nonprofits, no platform fees.
-- **Givebutter** (https://givebutter.com): free, donors can leave an optional tip.
-- **PayPal** (https://www.paypal.com/us/non-profit): discounted nonprofit rates, or free enrollment through PayPal Giving Fund.
-
-Then in `index.html`, find the `<!-- DONATE -->` section. The comment there lists the three edits: put the link in the button's `href`, change the button text to "Donate online", and change the note under it.
+To change it, find the `<!-- DONATE -->` section in `index.html` and replace the link in the button's `href`.
 
 ## Adding a contact form later
 
@@ -57,5 +55,6 @@ GitHub's guide: https://docs.github.com/pages/configuring-a-custom-domain-for-yo
 - Lead with South Carolina (the Lowcountry is the epicenter), then Georgia, then North Carolina.
 - The South Carolina numbers (643 nests statewide, 569 in Beaufort County, as of October 27, 2026, source Hornet Herald) and the "over 80% of nests reported by citizens" point were provided by the Hornet Defense League. Update them in the `<!-- SC NUMBERS -->` block of `index.html` when a new Hornet Herald comes out.
 - The four hawking photos (`images/hawking-1.webp` to `hawking-4.webp`) were provided by the Hornet Defense League.
-- The Get Involved section is waiting on three things, each marked with an `EDIT (still needed)` comment in `index.html`: the trap-building link and bait instructions, photos of the nest stages, and the Early Spring Queen Trapping date and flyer.
+- The Get Involved section uses material the Hornet Defense League sent on November 9, 2026: the trap instructions (typed out on the page, original PDF in `files/`), the Early Spring Queen Trapping flyer (`images/queen-trapping-flyer.webp` on the page, full-size PNG in `files/`), and the nest stages photo (`images/nest-stages.webp`). The flyer says "Early Spring 2027"; add exact dates to the queen trapping card when they are set.
+- The logo (`images/logo.webp`, plus `favicon.png` and `social.jpg`) is the "more black" version sent on November 9, 2026. It arrived on a solid black background, which was cut away so it sits on the light page.
 - Hornet facts are paraphrased from official sources (Georgia Department of Agriculture, Clemson Department of Plant Industry, USDA APHIS, UGA, Penn State Extension, Washington State Department of Agriculture), all linked in the Resources section. The approach was inspired by Asian Hornet Alert (UK). Detection numbers change quickly, so check the sources each season.

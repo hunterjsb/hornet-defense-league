@@ -191,6 +191,21 @@ sup a { text-decoration: none; font-weight: 700; }
 .involve { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.5rem; }
 .involve .card { border-top: 6px solid var(--amber); display: flex; flex-direction: column; }
 .involve .card .btn { align-self: flex-start; margin-top: auto; }
+.involve .card-actions { margin-top: auto; display: flex; flex-wrap: wrap; gap: .6rem; }
+.involve .card-actions .btn { margin-top: 0; }
+
+/* Trap instructions, flyer, nest stages */
+.howto { margin-top: 2.5rem; padding: 1.5rem 1.75rem; background: #fff; border: 1px solid var(--line); border-top: 6px solid var(--black); border-radius: var(--radius); scroll-margin-top: 90px; }
+.howto h3 { margin-top: 0; }
+.howto h4 { margin: 1.25rem 0 .4rem; font-size: 1.05rem; }
+.howto h4:first-child { margin-top: 0; }
+.howto ul, .howto ol { padding-left: 1.3rem; margin: 0 0 .5rem; }
+.howto li { margin-bottom: .3rem; }
+.howto .tips li { margin-bottom: .6rem; }
+.photo-flyer, .split-nest .photo { max-width: 440px; margin-left: auto; margin-right: auto; }
+.section-amber .donate-note a { color: var(--black); }
+.split-nest { grid-template-columns: 1fr 1.2fr; align-items: center; }
+@media (max-width: 860px) { .split-nest { grid-template-columns: 1fr; } }
 .involve .card p:last-of-type { margin-bottom: 1.1rem; }
 .big-fact { font-size: 1.15rem; font-weight: 700; color: var(--black); }
 @media (max-width: 860px) { .involve { grid-template-columns: 1fr; } }
