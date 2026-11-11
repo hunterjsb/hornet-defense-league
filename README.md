@@ -2,7 +2,7 @@
 
 A simple static website for the Hornet Defense League, a 501(c)(3) nonprofit protecting honeybees and native pollinators from the invasive yellow-legged hornet.
 
-Live site: https://hunterjsb.github.io/hornet-defense-league/
+Live site: https://hornetdefenseleague.org/
 
 It is plain HTML and CSS. There is no framework, no build step, no backend, and no login. GitHub Pages serves it for free straight from the `main` branch.
 
@@ -37,20 +37,12 @@ Then in `index.html`, find the `<!-- DONATE -->` section. The comment there list
 
 The Contact section uses a plain email link. For a real form without a server, sign up at **Formspree** (https://formspree.io, free tier) and paste their form snippet into the `<!-- CONTACT -->` section.
 
-## Custom domain: hornetdefenseleague.org (not connected yet)
+## Custom domain: hornetdefenseleague.org
 
-The domain **hornetdefenseleague.org** is registered at GoDaddy (registered 2026-10-19, using GoDaddy's default nameservers). It is **not** connected to this site yet. There is intentionally no `CNAME` file in this repo; adding one is step 1 below.
+The domain **hornetdefenseleague.org** is registered at GoDaddy (using GoDaddy's default nameservers) and was connected to this site on 2026-11-11.
 
-When ready:
-
-1. **GitHub:** repo **Settings > Pages > Custom domain**, enter `hornetdefenseleague.org` and Save. This creates a `CNAME` file in the repo containing just `hornetdefenseleague.org`.
-2. **DNS** (at GoDaddy, or at Cloudflare if the nameservers are moved there first):
-   - Remove GoDaddy's default parking `A` records on `@`.
-   - Add four `A` records for `@`: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
-   - Add a `CNAME` record: name `www`, value `hunterjsb.github.io`
-   - If using Cloudflare, set these to **DNS only** (grey cloud) at first so GitHub can issue the HTTPS certificate.
-3. Wait for GitHub to show the domain as verified, then tick **Enforce HTTPS** in Settings > Pages.
-4. Optional (Cloudflare only): switch records to Proxied afterwards and set **SSL/TLS** mode to **Full**.
+- **GitHub:** the `CNAME` file in this repo holds just `hornetdefenseleague.org`. Do not delete it, or the site falls back to the github.io address.
+- **DNS at GoDaddy:** four `A` records on `@` (`185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`) and a `CNAME` record `www` pointing to `hunterjsb.github.io`. The old github.io address redirects to the domain.
 
 GitHub's guide: https://docs.github.com/pages/configuring-a-custom-domain-for-your-github-pages-site
 
